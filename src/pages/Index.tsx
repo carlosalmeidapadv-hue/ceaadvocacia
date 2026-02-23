@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Scale, Briefcase, Wheat, FileText, Users, Phone, Mail, MapPin, GraduationCap, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
+import heroBg from "@/assets/hero-bg.jpg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -80,8 +81,12 @@ const Index = () => {
       </header>
 
       {/* Hero */}
-      <section id="inicio" className="min-h-screen flex items-center justify-center pt-16">
-        <div className="container mx-auto px-6 text-center max-w-3xl">
+      <section id="inicio" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src={heroBg} alt="" className="w-full h-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-background/60" />
+        </div>
+        <div className="container mx-auto px-6 text-center max-w-3xl relative z-10">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Advocacia com{" "}
             <span className="text-primary">excelência</span> e dedicação
@@ -251,7 +256,8 @@ const Index = () => {
         href={`https://wa.me/${WHATSAPP_NUMBER}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-muted flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 animate-pulse-whatsapp"
+        style={{ backgroundColor: "hsl(142, 70%, 45%)" }}
         aria-label="Contato via WhatsApp"
       >
         <MessageCircle size={28} className="text-white" />
