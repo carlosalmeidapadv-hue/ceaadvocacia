@@ -6,44 +6,44 @@
 
 @layer base {
   :root {
-    --background: 0 0% 33%;
-    --foreground: 24 26% 90%;
+    --background: 0 0% 10%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 38%;
-    --card-foreground: 24 26% 90%;
+    --card: 0 0% 16%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 38%;
-    --popover-foreground: 24 26% 90%;
+    --popover: 0 0% 16%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 24 26% 90%;
-    --primary-foreground: 0 0% 28%;
+    --primary: 43 50% 54%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 0 0% 40%;
-    --secondary-foreground: 24 26% 90%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 42%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 0 0% 45%;
-    --accent-foreground: 24 26% 90%;
+    --accent: 43 50% 54%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 24 26% 90%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 43%;
-    --input: 0 0% 40%;
-    --ring: 24 26% 90%;
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
+    --ring: 43 50% 54%;
 
     --radius: 0.375rem;
 
-    --sidebar-background: 0 0% 33%;
-    --sidebar-foreground: 24 26% 90%;
-    --sidebar-primary: 24 26% 90%;
-    --sidebar-primary-foreground: 0 0% 28%;
-    --sidebar-accent: 0 0% 38%;
-    --sidebar-accent-foreground: 24 26% 90%;
-    --sidebar-border: 0 0% 43%;
-    --sidebar-ring: 24 26% 90%;
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 43 50% 54%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 16%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 22%;
+    --sidebar-ring: 43 50% 54%;
   }
 }
 
@@ -62,12 +62,26 @@
   }
 }
 
+@layer utilities {
+  .text-gold {
+    color: hsl(43, 50%, 54%);
+  }
+
+  .bg-gold {
+    background-color: hsl(43, 50%, 54%);
+  }
+
+  .border-gold {
+    border-color: hsl(43, 50%, 54%);
+  }
+}
+
 @keyframes pulse-whatsapp {
   0%, 100% {
-    box-shadow: 0 0 0 0 hsla(0, 0%, 50%, 0.4);
+    box-shadow: 0 0 0 0 hsla(142, 70%, 45%, 0.4);
   }
   50% {
-    box-shadow: 0 0 0 12px hsla(0, 0%, 50%, 0);
+    box-shadow: 0 0 0 12px hsla(142, 70%, 45%, 0);
   }
 }
 
