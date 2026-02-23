@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Scale, Briefcase, Wheat, FileText, Users, Phone, Mail, MapPin, GraduationCap, MessageCircle } from "lucide-react";
+import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -37,7 +38,8 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="#inicio" className="font-serif text-xl font-semibold tracking-wide" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <a href="#inicio" className="flex items-center gap-2 font-serif text-xl font-semibold tracking-wide" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <img src={logo} alt="Logo" className="h-10 w-auto" />
             <span className="text-primary">Advocacia</span>
           </a>
 
@@ -249,8 +251,7 @@ const Index = () => {
         href={`https://wa.me/${WHATSAPP_NUMBER}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 animate-pulse-whatsapp"
-        style={{ backgroundColor: "hsl(142, 70%, 45%)" }}
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-muted flex items-center justify-center shadow-lg transition-transform hover:scale-110"
         aria-label="Contato via WhatsApp"
       >
         <MessageCircle size={28} className="text-white" />
