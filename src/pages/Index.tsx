@@ -121,10 +121,10 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-semibold mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 Sobre <span className="text-primary">Mim</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">Advogado com atuação estratégica e foco na defesa efetiva dos direitos de seus clientes, Dr. Carlos Eduardo Almeida construiu sua trajetória com base na técnica jurídica, na ética profissional e no compromisso com resultados concretos.
+              <p className="text-muted-foreground leading-relaxed mb-4 text-justify">Advogado com atuação estratégica e foco na defesa efetiva dos direitos de seus clientes, Dr. Carlos Eduardo Almeida construiu sua trajetória com base na técnica jurídica, na ética profissional e no compromisso com resultados concretos.
 
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">Com formação sólida e experiência prática nas áreas do Direito Civil, Processual Civil, Trabalhista e do Agronegócio, oferece um atendimento personalizado, atento às particularidades de cada caso e orientado por soluções jurídicas seguras e eficazes.
+              <p className="text-muted-foreground leading-relaxed mb-8 text-justify">Com formação sólida e experiência prática nas áreas do Direito Civil, Processual Civil, Trabalhista e do Agronegócio, oferece um atendimento personalizado, atento às particularidades de cada caso e orientado por soluções jurídicas seguras e eficazes.
 
 
 Sua atuação é pautada pela transparência, responsabilidade e dedicação integral, buscando não apenas a solução do conflito, mas a proteção dos interesses e da tranquilidade de seus clientes em todas as etapas do processo.
