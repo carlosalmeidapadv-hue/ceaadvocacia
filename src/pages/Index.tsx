@@ -39,7 +39,7 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="container mx-auto px-6 h-16 flex items-center justify-between bg-secondary">
           <a href="#inicio" className="flex items-center">
             <img src={logo} alt="Carlos Eduardo Almeida Advocacia" className="h-12 w-auto brightness-0 invert" />
           </a>
