@@ -216,10 +216,19 @@ const Index = () => {
             </div>
 
             {/* Form */}
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <Input placeholder="Seu nome" className="bg-card border-border focus:border-primary" />
-              <Input type="email" placeholder="Seu e-mail" className="bg-card border-border focus:border-primary" />
-              <Textarea placeholder="Sua mensagem" rows={5} className="bg-card border-border focus:border-primary" />
+            <form className="space-y-4" onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.currentTarget;
+              const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+              const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+              const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
+              const subject = encodeURIComponent(`Contato de ${name}`);
+              const body = encodeURIComponent(`Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`);
+              window.location.href = `mailto:carlosalmeidap.adv@gmail.com?subject=${subject}&body=${body}`;
+            }}>
+              <Input name="name" placeholder="Seu nome" required className="bg-card border-border focus:border-primary" />
+              <Input name="email" type="email" placeholder="Seu e-mail" required className="bg-card border-border focus:border-primary" />
+              <Textarea name="message" placeholder="Sua mensagem" rows={5} required className="bg-card border-border focus:border-primary" />
               <Button type="submit" size="lg" className="w-full text-base">
                 Enviar Mensagem
               </Button>
@@ -249,13 +258,15 @@ const Index = () => {
       </footer>
 
       {/* WhatsApp floating button */}
-      <button
-        onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank', 'noopener,noreferrer')}
+      <a
+        href={`https://wa.me/${WHATSAPP_NUMBER}`}
+        target="_top"
+        rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 animate-pulse-whatsapp cursor-pointer"
         style={{ backgroundColor: "hsl(142, 70%, 45%)" }}
         aria-label="Contato via WhatsApp">
         <MessageCircle size={28} className="text-white" />
-      </button>
+      </a>
     </div>);
 
 };
