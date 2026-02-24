@@ -10,26 +10,26 @@ import { Card, CardContent } from "@/components/ui/card";
 const WHATSAPP_NUMBER = "5500000000000";
 
 const navLinks = [
-  { label: "Início", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Áreas de Atuação", href: "#areas" },
-  { label: "Contato", href: "#contato" },
-];
+{ label: "Início", href: "#inicio" },
+{ label: "Sobre", href: "#sobre" },
+{ label: "Áreas de Atuação", href: "#areas" },
+{ label: "Contato", href: "#contato" }];
+
 
 const specializations = [
-  { icon: Scale, title: "Direito Civil e Processual Civil" },
-  { icon: Briefcase, title: "Direito Trabalhista" },
-  { icon: Wheat, title: "Direito do Agronegócio" },
-];
+{ icon: Scale, title: "Direito Civil e Processual Civil" },
+{ icon: Briefcase, title: "Direito Trabalhista" },
+{ icon: Wheat, title: "Direito do Agronegócio" }];
+
 
 const practiceAreas = [
-  { icon: Scale, title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões com atendimento personalizado." },
-  { icon: FileText, title: "Direito Processual Civil", desc: "Representação estratégica em litígios cíveis com foco em resultados eficientes." },
-  { icon: Briefcase, title: "Direito Trabalhista", desc: "Defesa de direitos trabalhistas para empresas e trabalhadores." },
-  { icon: Wheat, title: "Direito do Agronegócio", desc: "Assessoria jurídica especializada para o setor agropecuário e rural." },
-  { icon: Users, title: "Consultoria Empresarial", desc: "Orientação jurídica preventiva para empresas de todos os portes." },
-  { icon: FileText, title: "Mediação e Arbitragem", desc: "Resolução alternativa de conflitos com agilidade e menor custo." },
-];
+{ icon: Scale, title: "Direito Civil", desc: "Contratos, responsabilidade civil, família e sucessões com atendimento personalizado." },
+{ icon: FileText, title: "Direito Processual Civil", desc: "Representação estratégica em litígios cíveis com foco em resultados eficientes." },
+{ icon: Briefcase, title: "Direito Trabalhista", desc: "Defesa de direitos trabalhistas para empresas e trabalhadores." },
+{ icon: Wheat, title: "Direito do Agronegócio", desc: "Assessoria jurídica especializada para o setor agropecuário e rural." },
+{ icon: Users, title: "Consultoria Empresarial", desc: "Orientação jurídica preventiva para empresas de todos os portes." },
+{ icon: FileText, title: "Mediação e Arbitragem", desc: "Resolução alternativa de conflitos com agilidade e menor custo." }];
+
 
 const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,15 +45,15 @@ const Index = () => {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-              >
+            {navLinks.map((link) =>
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary border-primary text-left border-8 border-none">
+
                 {link.label}
               </a>
-            ))}
+            )}
           </nav>
 
           {/* Mobile toggle */}
@@ -63,20 +63,20 @@ const Index = () => {
         </div>
 
         {/* Mobile nav */}
-        {menuOpen && (
-          <nav className="md:hidden bg-background border-t border-border px-6 pb-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="block py-3 text-sm text-muted-foreground transition-colors hover:text-primary"
-              >
+        {menuOpen &&
+        <nav className="md:hidden bg-background border-t border-border px-6 pb-4">
+            {navLinks.map((link) =>
+          <a
+            key={link.href}
+            href={link.href}
+            onClick={() => setMenuOpen(false)}
+            className="block py-3 text-sm text-muted-foreground transition-colors hover:text-primary">
+
                 {link.label}
               </a>
-            ))}
+          )}
           </nav>
-        )}
+        }
       </header>
 
       {/* Hero */}
@@ -133,14 +133,14 @@ const Index = () => {
               {/* Pós-graduações */}
               <h3 className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Pós-Graduações</h3>
               <div className="space-y-4">
-                {specializations.map((spec) => (
-                  <div key={spec.title} className="flex items-center gap-4">
+                {specializations.map((spec) =>
+                <div key={spec.title} className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                       <GraduationCap size={18} className="text-primary" />
                     </div>
                     <span className="text-sm font-medium">{spec.title}</span>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -160,15 +160,15 @@ const Index = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {practiceAreas.map((area) => (
-              <Card key={area.title} className="bg-card border-border hover:border-primary/40 transition-colors group">
+            {practiceAreas.map((area) =>
+            <Card key={area.title} className="bg-card border-border hover:border-primary/40 transition-colors group">
                 <CardContent className="p-6">
                   <area.icon size={28} className="text-primary mb-4 group-hover:scale-110 transition-transform" />
                   <h3 className="text-lg font-semibold mb-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>{area.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{area.desc}</p>
                 </CardContent>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -194,7 +194,7 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Telefone</p>
-                  <p className="font-medium">(00) 00000-0000</p>
+                  <p className="font-medium">(43) 9 9608-5456</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -203,7 +203,7 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">E-mail</p>
-                  <p className="font-medium">contato@seuescritorio.com</p>
+                  <p className="font-medium">carlosalmeidap.adv@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -212,7 +212,7 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Endereço</p>
-                  <p className="font-medium">Rua Exemplo, 123 — Cidade/UF</p>
+                  <p className="font-medium">Rua Dr. Clementino S. Puppi, nº 1305, Sala 8, Jandaia do Sul/PR</p>
                 </div>
               </div>
             </div>
@@ -237,15 +237,15 @@ const Index = () => {
             © {new Date().getFullYear()} Advocacia — OAB/XX 00000
           </p>
           <nav className="flex gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-xs text-muted-foreground hover:text-primary transition-colors"
-              >
+            {navLinks.map((link) =>
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-xs text-muted-foreground hover:text-primary transition-colors">
+
                 {link.label}
               </a>
-            ))}
+            )}
           </nav>
         </div>
       </footer>
@@ -257,12 +257,12 @@ const Index = () => {
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 animate-pulse-whatsapp"
         style={{ backgroundColor: "hsl(142, 70%, 45%)" }}
-        aria-label="Contato via WhatsApp"
-      >
+        aria-label="Contato via WhatsApp">
+
         <MessageCircle size={28} className="text-white" />
       </a>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
