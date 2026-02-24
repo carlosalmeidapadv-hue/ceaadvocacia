@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, Scale, Briefcase, Wheat, FileText, Users, Phone, Mail, MapPin, GraduationCap, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo-header.png";
 import heroBg from "@/assets/hero-bg.jpg";
+import professionalPhoto from "@/assets/photo-professional.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -110,11 +111,8 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Photo placeholder */}
             <div className="flex justify-center">
-              <div className="w-72 h-80 lg:w-80 lg:h-96 rounded-lg bg-card border border-border flex items-center justify-center overflow-hidden">
-                <div className="text-center text-muted-foreground">
-                  <Users size={48} className="mx-auto mb-3 text-primary" />
-                  <p className="text-sm">Sua foto profissional</p>
-                </div>
+              <div className="w-72 h-80 lg:w-80 lg:h-96 rounded-lg bg-card border border-border overflow-hidden">
+                <img src={professionalPhoto} alt="Carlos Eduardo Almeida" className="w-full h-full object-cover" />
               </div>
             </div>
 
