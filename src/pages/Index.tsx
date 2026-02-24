@@ -39,9 +39,11 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="#inicio" className="flex items-center gap-2 font-serif text-xl font-semibold tracking-wide" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            <img src={logo} alt="Logo" className="h-10 w-auto" />
-            <span className="text-primary">Advocacia</span>
+          <a href="#inicio" className="flex items-center gap-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <span className="text-primary text-lg font-semibold tracking-wide leading-tight">
+              <span className="block text-base md:text-lg">Carlos Eduardo Almeida</span>
+              <span className="block text-[0.65rem] tracking-[0.25em] uppercase text-muted-foreground">Advocacia</span>
+            </span>
           </a>
 
           {/* Desktop nav */}
