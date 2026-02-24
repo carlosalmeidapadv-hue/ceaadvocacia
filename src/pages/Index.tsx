@@ -239,41 +239,41 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="border-t border-border py-8">
-        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            Carlos Eduardo Almeida Advocacia — OAB 256.624/RJ
+        <div className="container mx-auto px-6 md:flex-row items-center justify-between gap-4 flex flex-row border-2">
+          <p className="text-sm text-muted-foreground text-center">Justiça e direito são o fundamento do teu trono; 
+graça e verdade te precedem.  Salmos 89:14
+
+
+
+
+
+
+
+
           </p>
           <nav className="flex gap-6">
-            {navLinks.map((link) =>
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-xs text-muted-foreground hover:text-primary transition-colors">
+            {navLinks.map((link) => <a key={link.href} href={link.href} className="text-xs text-muted-foreground hover:text-primary transition-colors">
 
                 {link.label}
-              </a>
-            )}
+              </a>)}
           </nav>
         </div>
       </footer>
 
       {/* WhatsApp floating button */}
-      <button
-        onClick={() => {
-          const url = `https://wa.me/${WHATSAPP_NUMBER}`;
-          try {
-            if (window.top) {
-              window.top.location.href = url;
-            } else {
-              window.location.href = url;
-            }
-          } catch {
-            window.open(url, '_blank');
+      <button onClick={() => {const url = `https://wa.me/${WHATSAPP_NUMBER}`;try {
+          if (window.top) {
+            window.top.location.href = url;
+          } else {
+            window.location.href = url;
           }
-        }}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 animate-pulse-whatsapp cursor-pointer"
-        style={{ backgroundColor: "hsl(142, 70%, 45%)" }}
-        aria-label="Contato via WhatsApp">
+        } catch {
+          window.open(url, '_blank');
+        }
+      }}
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 animate-pulse-whatsapp cursor-pointer"
+      style={{ backgroundColor: "hsl(142, 70%, 45%)" }}
+      aria-label="Contato via WhatsApp">
         <MessageCircle size={28} className="text-white" />
       </button>
     </div>);
