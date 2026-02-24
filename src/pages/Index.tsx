@@ -232,7 +232,7 @@ const Index = () => {
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Carlos Eduardo Almeida Advocacia — OAB 256.624/RJ
+            Carlos Eduardo Almeida Advocacia — OAB 256.624/RJ
           </p>
           <nav className="flex gap-6">
             {navLinks.map((link) =>
