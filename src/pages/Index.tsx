@@ -249,16 +249,13 @@ const Index = () => {
       </footer>
 
       {/* WhatsApp floating button */}
-      <a
-        href={`https://wa.me/${WHATSAPP_NUMBER}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 animate-pulse-whatsapp"
+      <button
+        onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank', 'noopener,noreferrer')}
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 animate-pulse-whatsapp cursor-pointer"
         style={{ backgroundColor: "hsl(142, 70%, 45%)" }}
         aria-label="Contato via WhatsApp">
-
         <MessageCircle size={28} className="text-white" />
-      </a>
+      </button>
     </div>);
 
 };
