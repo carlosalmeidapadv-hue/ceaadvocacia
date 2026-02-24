@@ -258,15 +258,24 @@ const Index = () => {
       </footer>
 
       {/* WhatsApp floating button */}
-      <a
-        href={`https://wa.me/${WHATSAPP_NUMBER}`}
-        target="_top"
-        rel="noopener noreferrer"
+      <button
+        onClick={() => {
+          const url = `https://wa.me/${WHATSAPP_NUMBER}`;
+          try {
+            if (window.top) {
+              window.top.location.href = url;
+            } else {
+              window.location.href = url;
+            }
+          } catch {
+            window.open(url, '_blank');
+          }
+        }}
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 animate-pulse-whatsapp cursor-pointer"
         style={{ backgroundColor: "hsl(142, 70%, 45%)" }}
         aria-label="Contato via WhatsApp">
         <MessageCircle size={28} className="text-white" />
-      </a>
+      </button>
     </div>);
 
 };
