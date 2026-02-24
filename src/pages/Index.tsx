@@ -121,24 +121,24 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-semibold mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 Sobre <span className="text-primary">Mim</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">Advogado comprometido com a busca pela justiça e pela defesa dos direitos dos meus clientes. Com formação sólida e experiência prática, ofereço um atendimento personalizado e estratégico.
+              <p className="text-muted-foreground leading-relaxed mb-4">Advogado com atuação estratégica e foco na defesa efetiva dos direitos de seus clientes, Dr. Carlos Eduardo Almeida construiu sua trajetória com base na técnica jurídica, na ética profissional e no compromisso com resultados concretos.
 
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Minha atuação é pautada pela ética, transparência e dedicação em cada caso, buscando sempre as melhores soluções jurídicas.
+              <p className="text-muted-foreground leading-relaxed mb-8">Com formação sólida e experiência prática nas áreas do Direito Civil, Processual Civil, Trabalhista e do Agronegócio, oferece um atendimento personalizado, atento às particularidades de cada caso e orientado por soluções jurídicas seguras e eficazes.
+
+
+Sua atuação é pautada pela transparência, responsabilidade e dedicação integral, buscando não apenas a solução do conflito, mas a proteção dos interesses e da tranquilidade de seus clientes em todas as etapas do processo.
               </p>
 
               {/* Pós-graduações */}
               <h3 className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Pós-Graduações</h3>
               <div className="space-y-4">
-                {specializations.map((spec) =>
-                <div key={spec.title} className="flex items-center gap-4">
+                {specializations.map((spec) => <div key={spec.title} className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                       <GraduationCap size={18} className="text-primary" />
                     </div>
                     <span className="text-sm font-medium">{spec.title}</span>
-                  </div>
-                )}
+                  </div>)}
               </div>
             </div>
           </div>
