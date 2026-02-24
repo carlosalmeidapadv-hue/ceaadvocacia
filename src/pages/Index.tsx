@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Scale, Briefcase, Wheat, FileText, Users, Phone, Mail, MapPin, GraduationCap, MessageCircle } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-header.png";
 import heroBg from "@/assets/hero-bg.jpg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -39,11 +39,8 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="#inicio" className="flex items-center gap-2" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            <span className="text-primary text-lg font-semibold tracking-wide leading-tight">
-              <span className="block text-base md:text-lg">Carlos Eduardo Almeida</span>
-              <span className="block text-[0.65rem] tracking-[0.25em] uppercase text-muted-foreground">Advocacia</span>
-            </span>
+          <a href="#inicio" className="flex items-center">
+            <img src={logo} alt="Carlos Eduardo Almeida Advocacia" className="h-12 w-auto brightness-0 invert" />
           </a>
 
           {/* Desktop nav */}
