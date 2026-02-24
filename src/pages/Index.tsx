@@ -123,8 +123,8 @@ const Index = () => {
               <h2 className="text-3xl md:text-4xl font-semibold mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
                 Sobre <span className="text-primary">Mim</span>
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Advogado(a) comprometido(a) com a busca pela justiça e pela defesa dos direitos dos meus clientes. Com formação sólida e experiência prática, ofereço um atendimento personalizado e estratégico.
+              <p className="text-muted-foreground leading-relaxed mb-4">Advogado comprometido com a busca pela justiça e pela defesa dos direitos dos meus clientes. Com formação sólida e experiência prática, ofereço um atendimento personalizado e estratégico.
+
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Minha atuação é pautada pela ética, transparência e dedicação em cada caso, buscando sempre as melhores soluções jurídicas.
