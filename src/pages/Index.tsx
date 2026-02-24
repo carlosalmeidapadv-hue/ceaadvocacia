@@ -119,7 +119,7 @@ const Index = () => {
             {/* Bio */}
             <div>
               <h2 className="text-3xl md:text-4xl font-semibold mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Sobre Mim
-                <span className="text-primary">Mim</span>
+                <span className="text-primary"></span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4 text-justify">Advogado com atuação pautada pela ética, técnica jurídica e compromisso com a efetiva defesa dos direitos de seus clientes, Dr. Carlos Eduardo Almeida oferece um atendimento personalizado e estratégico, sempre atento às particularidades de cada caso e à busca das melhores soluções jurídicas.
 
